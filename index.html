@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform</title>
+    <link rel="shortcut icon" href="/img/logo.png">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper dark-theme">
+        <main class="content">
+
+            <div class="content__container">
+
+                <header class="header">
+                    <h1 class="header__title">CSS Transform</h1>
+                    <div class="theme-button">
+                        <button type="button">Изменить тему...</button>
+                    </div>
+                </header>
+
+                <div class="content__element">
+                    <h2 class="element__subtitle">translate (x, y)</h2>
+
+                    <div class="element__wrapper2d">
+                        <div class="element__element element-one">translate</div>
+                    </div>
+
+                    <div class="element__text">
+                        <span>translate</span> - сдвигает элемент на новое место, перемещая относительно
+                        изначального положения объекта вправо и вниз, используя координаты X и Y. Записывается
+                        следующим образом translate (x,y);
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code class="code-item__main">.element-one {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #efe2ba;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-one<span>:hover</span> {</code>
+                        <code class="code-item__desc"><span>transform:</span> translate(60px, 100px);</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+                <div class="content__element">
+                    <h2 class="element__subtitle">scale (x, y)</h2>
+
+                    <div class="element__wrapper2d">
+                        <div class="element__element element-two">scale</div>
+                    </div>
+
+                    <div class="element__text">
+                        <span>scale</span> - масштабирует элементы, делая их больше или меньше. По умолчанию
+                        значения указаны как единица (1) - это реальный размер объекта. Первое значение масштабирует
+                        элемент по ширине, второе — по высоте. Отрицательные значения отображают элемент зеркально.
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code class="code-item__main">.element-two {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #d79922;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-two<span>:hover</span> {</code>
+                        <code class="code-item__desc"><span>transform:</span> scale(-1.5, 2);</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+                <div class="content__element">
+                    <div class="element__subtitle">rotate (угол+deg)</div>
+
+                    <div class="element__wrapper2d">
+                        <div class="element__element element-three">rotate</div>
+                    </div>
+
+                    <div class="element__text">
+                        <span>rotate</span> - поворачивает элементы на заданное количество градусов, отрицательные
+                        значения поворачивают элемент против часовой стрелки, положительные — по часовой стрелке.
+                        Записываются значения как градус поворота и deg
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code class="code-item__main">.element-three {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #d79922;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-three<span>:hover</span> {</code>
+                        <code class="code-item__desc"><span>transform:</span> rotate(45deg);</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+                <div class="content__element">
+                    <div class="element__subtitle">skew (x-угол+deg, y-угол+deg)</div>
+
+                    <div class="element__wrapper2d">
+                        <div class="element__element element-four">skew</div>
+                    </div>
+
+                    <div class="element__text">
+                        <span>skew</span> - деформирует (искажает) стороны объекта относительно координатных осей.
+                        Если указано одно значение, второе будет определено браузером автоматически. Записываются
+                        значения как градус поворота и deg
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code class="code-item__main">.element-four {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #d3e3fc;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-four<span>:hover</span> {</code>
+                        <code class="code-item__desc"><span>transform:</span> skew(10deg, 25deg);</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+                <div class="content__element">
+                    <div class="element__subtitle">matrix (a, c, b, d, x, y)</div>
+
+                    <div class="element__wrapper2d">
+                        <div class="element__element element-five">matrix</div>
+                    </div>
+
+                    <div class="element__text">
+                        <span>matrix (a, c, b, d, x, y)</span> - позволяет объединить несколько функций
+                        2D-трансформаций в одной. В качестве трансформации допустимы поворот, масштабирование,
+                        наклон (деформация) и изменение положения. Свойства указываются без единиц измерения.
+                        <ul>
+                            <li>a<p> - изменяет масштаб по горизонтали. Значение от 0 до 1 уменьшает элемент, больше
+                                    1 — увеличивает.</p>
+                            </li>
+                            <li>c<p> - деформирует (сдвигает) стороны элемента по оси Y, положительное значение —
+                                    вверх, отрицательное — вниз.</p>
+                            </li>
+                            <li>b<p> - деформирует (сдвигает) стороны элемента по оси X, положительное значение —
+                                    влево, отрицательное — вправо.</p>
+                            </li>
+                            <li>d<p> - изменяет масштаб по вертикали. Значение меньше 1 уменьшает элемент, больше 1
+                                    — увеличивает.</p>
+                            </li>
+                            <li>x<p> - смещает элемент по оси X, положительное — вправо, отрицательное — влево.</p>
+                            </li>
+                            <li>y<p> - смещает элемент по оси Y, положительное значение — вниз, отрицательное —
+                                    вверх.</p>
+                            </li>
+                        </ul>
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code class="code-item__main">.element-five {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #14a098;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-five<span>:hover</span> {</code>
+                        <code class="code-item__desc"><span>transform:</span> matrix(2, 0.2, 0.4, 0.8, 100, 50);</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+                <div class="content__element">
+                    <div class="element__subtitle">transform-origin</div>
+
+                    <div class="element__wrapper2d">
+                        <div class="element__element element-six">transform-origin</div>
+                    </div>
+
+                    <div class="element__text">
+                        <span>transform-origin</span> - позволяет сместить центр трансформации, относительно
+                        которого происходит изменение положения/размера/формы элемента
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code class="code-item__main">.element-six {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #e27d60;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code
+                            class="code-item__desc"><span>transform-origin:</span> right top;<span style="color: #65747f"> //или transform-origin: 170px 0px;</span></code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-six<span>:hover</span> {</code>
+                        <code class="code-item__desc"><span>transform:</span> rotate(50deg);</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+                <div class="content__element">
+                    <div class="element__subtitle">perspective, perspective-origin</div>
+
+                    <div class="element__wrapper3d">
+                        <div class="element__element element-seven element-seven-adaptive">perspective,
+                            perspective-origin</div>
+                    </div>
+
+                    <div class="element__text">
+                        <span>perspective, perspective-origin</span> - установка глубины и смена точки начала
+                        координат
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code
+                            class="code-item__main">.element__wrapper3d {<span style="color: #65747f"> //Оболочка блока .element-seven</span></code>
+                        <code class="code-item__desc"><span>perspective-origin:</span> center;</code>
+                        <code class="code-item__desc"><span>perspective:</span> 400px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-seven {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #bc986a;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-seven<span>:hover</span> {</code>
+                        <code class="code-item__desc"><span>transform:</span> rotateX(40deg);</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__text">или</code>
+                        <code
+                            class="code-item__main">.element__wrapper3d {<span style="color: #65747f"> //Оболочка блока .element-seven</span></code>
+                        <code class="code-item__desc"><span>perspective-origin:</span> center;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-seven {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #bc986a;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-seven<span>:hover</span> {</code>
+                        <code class="code-item__desc"><span>transform:</span> perspective(400px) rotateX(40deg)</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+                <div class="content__element">
+                    <div class="element__subtitle">translate3D (x, y, z)</div>
+
+                    <div class="element__wrapper3d">
+                        <div class="element__element element-eight">translate3D</div>
+                    </div>
+
+                    <div class="element__text">
+                        <span>translate3D</span> - по аналогии со своим 2D братом это значение задает перемещение
+                        элемента, но, в 3D-пространстве. Помимо оси X и Y добавляется ось Z.
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code
+                            class="code-item__main">.element__wrapper3d {<span style="color: #65747f"> //Оболочка блока .element-eight</span></code>
+                        <code class="code-item__desc"><span>perspective-origin:</span> center;</code>
+                        <code class="code-item__desc"><span>perspective:</span> 400px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-eight {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #5cdb95;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-eight<span>:hover</span> {</code>
+                        <code class="code-item__desc"><span>transform:</span> translate3d(25px, -30px, 60px);</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+                <div class="content__element">
+                    <div class="element__subtitle">scale3D (x, y, z)</div>
+
+                    <div class="element__wrapper3d">
+                        <div class="element__element element-ten">scale3D</div>
+                    </div>
+
+                    <div class="element__text">
+                        <span>scale3D</span> - задает трехмерное масштабирование по одной из осей X Y Z. Фактически
+                        повторяет функционал своего 2d аналога.
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code
+                            class="code-item__main">.element__wrapper3d {<span style="color: #65747f"> //Оболочка блока .element-ten</span></code>
+                        <code class="code-item__desc"><span>perspective-origin:</span> center;</code>
+                        <code class="code-item__desc"><span>perspective:</span> 400px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-ten {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #fccd04;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-ten<span>:hover</span> {</code>
+                        <code class="code-item__desc"><span>transform:</span> scale3d(0.7, 1.5, 5);</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+                <div class="content__element">
+                    <div class="element__subtitle">rotate3d (x, y, z, deg)</div>
+
+                    <div class="element__wrapper3d">
+                        <div class="element__element element-eleven">rotate3d</div>
+                    </div>
+
+                    <div class="element__text">
+                        <span>rotate3d</span> - вращает элемент относительно трех осей. Элемент поворачивается под
+                        углом, задаваемым последним параметром относительно вектора направления X, Y, Z
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code
+                            class="code-item__main">.element__wrapper3d {<span style="color: #65747f"> //Оболочка блока .element-eleven</span></code>
+                        <code class="code-item__desc"><span>perspective-origin:</span> center;</code>
+                        <code class="code-item__desc"><span>perspective:</span> 400px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-eleven {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #86c232;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-eleven<span>:hover</span> {</code>
+                        <code class="code-item__desc"><span>transform:</span> rotate3d(2, 1, 2, 80deg);</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+                <div class="content__element">
+                    <div class="element__subtitle" style="word-break: break-all;">matrix3d
+                        (n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</div>
+
+                    <div class="element__wrapper3d">
+                        <div class="element__element element-twelve">matrix3d</div>
+                    </div>
+
+                    <div class="element__text">
+                        <span>matrix3d</span> - задает трехмерное преобразование как однородную матрицу размером 4×4
+                        с шестнадцатью значениями в столбцах
+                        <p>Генератор 3D матриц<span> - <a href="http://ds-overdesign.com/transform/matrix3d.html"
+                                    target="_blank">нажми!</a></span></p>
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code
+                            class="code-item__main">.element__wrapper3d {<span style="color: #65747f"> //Оболочка блока .element-twelve</span></code>
+                        <code class="code-item__desc"><span>perspective-origin:</span> center;</code>
+                        <code class="code-item__desc"><span>perspective:</span> 400px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-twelve {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #65ccb8;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-twelve<span>:hover</span> {</code>
+                        <code
+                            class="code-item__desc"><span>transform:</span> matrix3d(0.4089,-0.5,0.34,0,0.50,0.8526,0.17,0,-0.34,-0.17,0.9211999999999999,0,35,60,1,1);</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+                <div class="content__element">
+                    <div class="element__subtitle">Множественные 3D трансформации</div>
+
+                    <div class="element__wrapper3d">
+                        <div class="element__element element-thirteen">translate3d, rotate3d</div>
+                    </div>
+
+                    <div class="element__text">
+                        Запись нескольких 3D значений в одно свойство transform.
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code
+                            class="code-item__main">.element__wrapper3d {<span style="color: #65747f"> //Оболочка блока .element-thirteen</span></code>
+                        <code class="code-item__desc"><span>perspective-origin:</span> center;</code>
+                        <code class="code-item__desc"><span>perspective:</span> 400px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-thirteen {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #5085a5;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-thirteen<span>:hover</span> {</code>
+                        <code
+                            class="code-item__desc"><span>transform:</span> translate3d(30px, 30px, 80px) rotate3d(1, 1, 1, 45deg)</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+                <div class="content__element">
+                    <div class="element__subtitle">transform-style</div>
+
+                    <div class="element__wrapper3d transform-style">
+                        <div class="element__element element-fourteen">transform-style</div>
+                    </div>
+
+                    <div class="element__text">
+                        <span>transform-style</span> - задает стиль трансформации. По умолчанию - flat
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code
+                            class="code-item__main">.element__wrapper3d {<span style="color: #65747f"> //Оболочка блока .element-fourteen</span></code>
+                        <code class="code-item__desc"><span>perspective-origin:</span> right top;</code>
+                        <code class="code-item__desc"><span>perspective:</span> 400px;</code>
+                        <code class="code-item__desc"><span>transform-style:</span> preserve-3d;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-fourteen {</code>
+                        <code class="code-item__desc"><span>background-color:</span> #e64398;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.element-fourteen<span>:hover</span> {</code>
+                        <code class="code-item__desc"><span>transform:</span> rotate3d(1, 1, 1, 45deg);</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+                <div class="content__element">
+                    <div class="element__subtitle">Backface-visibility</div>
+
+                    <div class="flip">
+                        <div class="flip__body">
+                            <div class="flip__front">Hey</div>
+                            <div class="flip__back">Bye</div>
+                        </div>
+                    </div>
+
+                    <div class="element__text">
+                        Свойство определяет, будет ли видна пользователю обратная сторона элемента. По умолчанию -
+                        visible
+                        <h2>CSS код:</h2>
+                    </div>
+
+                    <div class="element__code">
+                        <code
+                            class="code-item__main">.flip__body {<span style="color: #65747f"> //Оболочка блока .flip__front, .flip__back</span></code>
+                        <code class="code-item__desc"><span>position:</span> relative;</code>
+                        <code class="code-item__desc"><span>width:</span> 170px;</code>
+                        <code class="code-item__desc"><span>height:</span> 170px;</code>
+                        <code class="code-item__desc"><span>transition:</span> all 0.8s ease 0s;</code>
+                        <code class="code-item__desc"><span>transform-style:</span> preserve-3d;</code>
+                        <code class="code-item__desc"><span>font-size:</span> 25px;</code>
+                        <code class="code-item__desc"><span>color:</span> #fff;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.flip__front, .flip__back {</code>
+                        <code class="code-item__desc"><span>position:</span> absolute;</code>
+                        <code class="code-item__desc"><span>width:</span> 100%;</code>
+                        <code class="code-item__desc"><span>height:</span> 100%;</code>
+                        <code class="code-item__desc"><span>top:</span> 0;</code>
+                        <code class="code-item__desc"><span>left:</span> 0;</code>
+                        <code class="code-item__desc"><span>display:</span> flex;</code>
+                        <code class="code-item__desc"><span>justify-content:</span> center;</code>
+                        <code class="code-item__desc"><span>align-items:</span> center;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.flip__front {</code>
+                        <code class="code-item__desc"><span>z-index:</span> 2;</code>
+                        <code class="code-item__desc"><span>transform:</span> rotateY(0deg);</code>
+                        <code class="code-item__desc"><span>background-color:</span> #77608d;</code>
+                        <code class="code-item__desc"><span>backface-visibility:</span> hidden;</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.flip__back {</code>
+                        <code class="code-item__desc"><span>transform:</span> rotateY(-180deg);</code>
+                        <code class="code-item__desc"><span>background-color:</span> rgba(121, 79, 69, 0.5);</code>
+                        <code class="code-item__main">}</code>
+                        <code class="code-item__main">.flip__body<span>:hover</span> {</code>
+                        <code class="code-item__desc"><span>transform:</span> rotateY(-180deg);</code>
+                        <code class="code-item__main">}</code>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__text">
+                <p>CSS Transform</p>
+                <p>Практика</p>
+                <p>19.08.22</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
